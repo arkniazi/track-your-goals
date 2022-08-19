@@ -3,7 +3,7 @@ jobs:
     build:
         working_directory: ~/track-your-goals
         docker:
-            - image: circleci/ruby:3.1.0
+            - image: circleci/ruby:3.1
               environment:
                 RAILS_ENV: test
         steps:
