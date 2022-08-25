@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1.text-xl.font-semibold Goals
+
+#goals
+  - @goals.each do |goal|
+    == render goal
+    p
+      = link_to "Show this goal", goal
+
+= link_to "New goal", new_goal_path

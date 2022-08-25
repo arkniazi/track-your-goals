@@ -1,0 +1,9 @@
+.flex.flex-col.justify-center.items-center.w-full
+  h1.text-xl.font-semibold.mb-4.text-gray-700 New goal
+
+  == render "form", goal: @goal
+
+  br
+
+  div
+    = link_to "Back to goals", goals_path

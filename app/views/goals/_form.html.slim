@@ -1,0 +1,35 @@
+.w-full.max-w-lg
+  = form_with(model: @goal) do |form|
+    - if @goal.errors.any?
+      div style="color: red"
+        h2 = "#{pluralize(@goal.errors.count, "error")} prohibited this goal from being saved:"
+        ul
+          - @goal.errors.each do |error|
+            li = error.full_message
+    .flex.flex-wrap.-mx3.mb-6
+      .w-full.py-3
+        = form.label :name, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :name, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :desc, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_area :desc, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :start_at, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.date_field :start_at, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :end_at, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.date_field :end_at, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.flex.items-center.py-3 
+        = form.check_box :active, class: "mr-2 leading-tight"
+        = form.label :active, class: "block text-gray-500 font-bold"
+      .w-full.flex.items-center.py-3
+        = form.check_box :completed, class: "mr-2 leading-tight"
+        = form.label :completed, class: "block text-gray-500 font-bold"
+      .w-full.py-3 
+        = form.label :alert_type, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :alert_type, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      
+
+    div
+      = render ButtonComponent.new(title: "Button text", type: "submit")
+      / = form.submit

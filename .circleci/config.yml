@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+    build:
+        working_directory: ~/track-your-goals
+        docker:
+            - image: cimg/ruby:3.1.2
+              environment:
+                RAILS_ENV: test
+        steps:
+          - checkout
+          - run: bundle install
+          - run: rspec
