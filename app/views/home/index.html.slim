@@ -3,3 +3,6 @@ div
     = 'Track Your Goals'
   div
     = render ButtonComponent.new(title: "Button text", type: "submit")
+
+  div 
+    =render CardComponent.new(goal: Goal.new(id: 10, name: "Card Title", desc: "Description of card"),)

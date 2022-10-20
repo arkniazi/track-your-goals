@@ -2,7 +2,7 @@
 #
 # Table name: goal_alerts
 #
-#  id           :integer          not null, primary key
+#  id           :bigint           not null, primary key
 #  goal_id      :integer
 #  question     :string
 #  answer       :string

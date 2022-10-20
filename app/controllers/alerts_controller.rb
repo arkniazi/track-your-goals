@@ -66,6 +66,7 @@ class AlertsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def alert_params
-    params.fetch(:alert, {})
+    # params.fetch(:alert, {})
+    params.require(:alert).permit(:title, :interval)
   end
 end

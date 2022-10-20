@@ -25,11 +25,32 @@
       .w-full.flex.items-center.py-3
         = form.check_box :completed, class: "mr-2 leading-tight"
         = form.label :completed, class: "block text-gray-500 font-bold"
+      /.w-full.py-3 
+      /  = form.label :alert_type, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+      /  = form.number_field :alert, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+
       .w-full.py-3 
-        = form.label :alert_type, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        = form.text_field :alert_type, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
-      
+        = form.label :alert_id, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.collection_select(:alert_id, Alert.all, :id, :title , {}, { multiple: false, size: 4, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" })
+        / = form.collection_select(:alert_type, Alert.all, :id, :title , {}, { multiple: true, size: 4, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" })
+        
+      .w-full.py-3
+        = form.label :alert_question, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :alert_question, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
 
     div
-      = render ButtonComponent.new(title: "Button text", type: "submit")
+      = render ButtonComponent.new(title: "Save Goal", type: "submit")
       / = form.submit
+
+
+
+/ - if parent_id
+/         div 
+/           = form.submit 
+/           / = link_to "Save Sub Goal", create_sub_goal_path(parent_id), data: { turbo_method: "post" } 
+/           / = button_to 'Save sub goal', create_sub_goal_path(parent_id)
+/           / = link_to "Save sub goal", create_sub_goal_path(parent_id), method: :post
+/     - else 
+/         div
+/           = render ButtonComponent.new(title: "Save Goal", type: "submit")
+/           / = form.submit
