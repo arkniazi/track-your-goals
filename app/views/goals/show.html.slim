@@ -2,9 +2,25 @@ p style="color: green" = notice
 
 == render @goal
 
-div
+.mt-4.mx-auto   
+  h3.font-bold Goal Alert Question 
+
+  - for alert in @goal_alert
+    p =alert.question
+
+.mt-4 
+  h3.font-bold Sub Goals 
+  - for sub_goal in @sub_goals
+    h4 =sub_goal.name
+
+.mt-4   
+  = link_to "Create Sub Goal", new_sub_goal_path
+
+
+div.mt-4
   => link_to "Edit this goal", edit_goal_path(@goal)
   '|
-  =< link_to "Back to goals", goals_path
-
+  => link_to "Back to goals", goals_path
+  '|
+  
   = button_to "Destroy this goal", @goal, method: :delete

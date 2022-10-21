@@ -5,7 +5,6 @@ h1.text-xl.font-semibold Goals
 #goals
   - @goals.each do |goal|
     == render goal
-    p
-      = link_to "Show this goal", goal
 
-= link_to "New goal", new_goal_path
+.flex.justify-center
+  = link_to "New goal", new_goal_path, class: "py-3 px-8 bg-red-400 hover:bg-red-800"

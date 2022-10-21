@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -24,27 +25,27 @@ AlertType.create!([
   {
     title: 'Weekly',
     interval: 7
- },
- {
+  },
+  {
     title: 'Monthly',
     interval: 30
- }
+  },
 ])
 
 # Add sample goals
 Goal.create!([
   {
-   name: 'Read the book daily',
-   desc: 'I need to maintain reading habit',
-   start_at: Time.now,
-   end_at: Time.now + 365,
-   alert_type_id: 1
+    name: 'Read the book daily',
+    desc: 'I need to maintain reading habit',
+    start_at: Time.now,
+    end_at: Time.now + 365,
+    alert_type_id: 1
   },
-   {
-   name: 'Weekly progress review',
-   desc: 'Progress needs to be reviewed consistently',
-   start_at: Time.now,
-   end_at: Time.now + 365,
-   alert_type_id: 2
-  }
+  {
+    name: 'Weekly progress review',
+    desc: 'Progress needs to be reviewed consistently',
+    start_at: Time.now,
+    end_at: Time.now + 365,
+    alert_type_id: 2
+  },
 ])

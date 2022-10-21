@@ -1,5 +1,8 @@
 div
   h1.text-xl.font-semibold
-    = 'testing'
+    = 'Track Your Goals'
   div
-    = render ButtonComponent.new(title: "Button text")
+    = render ButtonComponent.new(title: "Button text", type: "submit")
+
+  div 
+    =render CardComponent.new(goal: Goal.new(id: 10, name: "Card Title", desc: "Description of card"),)

@@ -6,5 +6,16 @@
         - @alert.errors.each do |error|
           li = error.full_message
 
+  .flex.flex-wrap.-mx3.mb-6
+      .w-full.py-3
+        = form.label :title, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :title, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      
+      .w-full.py-3
+        = form.label :interval, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.number_field :interval, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+
   div
-    = form.submit
+      = render ButtonComponent.new(title: "Save Alert", type: "submit")
+      / = form.submit
+  

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: goal_alerts
 #
-#  id           :integer          not null, primary key
+#  id           :bigint           not null, primary key
 #  goal_id      :integer
 #  question     :string
 #  answer       :string
@@ -13,7 +15,7 @@
 #  updated_at   :datetime         not null
 #
 FactoryBot.define do
-  factory :goal_alert do 
+  factory :goal_alert do
     goal
     question { 'Have you made any progress?' }
     answer { 'Yes I have' }

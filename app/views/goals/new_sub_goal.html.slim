@@ -1,0 +1,52 @@
+h1 Create new sub goal
+
+/ == render "form", goal: @goal, parent_id: @parent_id
+
+.w-full.max-w-lg
+  = form_with(model: @goal, url: create_sub_goal_path(@parent_id)) do |form|
+    - if @goal.errors.any?
+      div style="color: red"
+        h2 = "#{pluralize(@goal.errors.count, "error")} prohibited this goal from being saved:"
+        ul
+          - @goal.errors.each do |error|
+            li = error.full_message
+    .flex.flex-wrap.-mx3.mb-6
+      .w-full.py-3
+        = form.label :name, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :name, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :desc, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_area :desc, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :start_at, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.date_field :start_at, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.py-3 
+        = form.label :end_at, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.date_field :end_at, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+      .w-full.flex.items-center.py-3 
+        = form.check_box :active, class: "mr-2 leading-tight"
+        = form.label :active, class: "block text-gray-500 font-bold"
+      .w-full.flex.items-center.py-3
+        = form.check_box :completed, class: "mr-2 leading-tight"
+        = form.label :completed, class: "block text-gray-500 font-bold"
+      /.w-full.py-3 
+      /  = form.label :alert_type, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+      /  = form.number_field :alert, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+
+      .w-full.py-3 
+        = form.label :alert_id, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.collection_select(:alert_id, Alert.all, :id, :title , {}, { multiple: false, size: 4, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" })
+        / = form.collection_select(:alert_type, Alert.all, :id, :title , {}, { multiple: true, size: 4, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" })
+        
+      .w-full.py-3
+        = form.label :alert_question, class: "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        = form.text_field :alert_question, class: "appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight"
+
+      = render ButtonComponent.new(title: "Save Sub Goal", type: "submit")
+
+br
+
+div
+  => link_to "Show this goal", @goal
+  '|
+  =< link_to "Back to goals", goals_path

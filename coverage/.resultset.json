@@ -9,7 +9,7 @@
           1,
           null,
           null,
-          1
+          0
         ]
       },
       "/Users/talal/workspace/Personal/track-your-goals/config/application.rb": {
@@ -24,20 +24,20 @@
           null,
           1,
           null,
-          1,
-          1,
+          0,
+          0,
           null,
-          1,
-          null,
-          null,
+          0,
           null,
           null,
           null,
           null,
           null,
           null,
-          1,
-          1,
+          null,
+          null,
+          0,
+          0,
           null,
           null,
           null
@@ -53,109 +53,14 @@
           1
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/config/environments/test.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/components/footer_component_spec.rb": {
         "lines": [
           null,
           null,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/config/initializers/assets.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/config/initializers/content_security_policy.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
           null,
           null,
           null,
@@ -167,30 +72,96 @@
           null
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/config/initializers/filter_parameter_logging.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/rails_helper.rb": {
         "lines": [
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
           1,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/config/initializers/inflections.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/components/navbar_component_spec.rb": {
         "lines": [
           null,
           null,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
           null,
           null,
           null,
@@ -202,7 +173,7 @@
           null
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/config/initializers/permissions_policy.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/models/alert_spec.rb": {
         "lines": [
           null,
           null,
@@ -215,31 +186,15 @@
           null,
           null,
           null,
+          null,
+          1,
+          null,
+          0,
+          0,
           null
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/spec/factories/alert_types.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/spec/factories/goal_alerts.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/models/alert_type_spec.rb": {
         "lines": [
           null,
           null,
@@ -253,141 +208,12 @@
           null,
           null,
           null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/spec/factories/goals.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/config/routes.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/alert_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/alerts_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/application_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/goal_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/goals_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/helpers/home_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/spec/support/factory_bot.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/models/alert_type.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
           null
         ]
       },
@@ -407,36 +233,15 @@
           null,
           null,
           null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/talal/workspace/Personal/track-your-goals/app/models/goal_alert.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
-          1,
-          1,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
           null
         ]
       },
@@ -459,19 +264,21 @@
           null,
           null,
           null,
-          1,
+          null,
           null,
           1,
-          1,
           null,
-          2,
-          2,
-          2,
-          2,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
           null
         ]
       },
-      "/Users/talal/workspace/Personal/track-your-goals/app/models/goal.rb": {
+      "/Users/talal/workspace/Personal/track-your-goals/spec/models/user_spec.rb": {
         "lines": [
           null,
           null,
@@ -492,15 +299,20 @@
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
-          1,
-          1,
-          1,
-          1,
+          null,
+          0,
+          0,
           null
         ]
       }
     },
-    "timestamp": 1661348448
+    "timestamp": 1666349426
   }
 }

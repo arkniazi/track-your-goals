@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: goal_alerts
 #
-#  id           :integer          not null, primary key
+#  id           :bigint           not null, primary key
 #  goal_id      :integer
 #  question     :string
 #  answer       :string
@@ -16,8 +18,7 @@ require 'rails_helper'
 
 RSpec.describe GoalAlert, type: :model do
   let(:goal_alert) { create(:goal_alert, :with_goal) }
-  
+
   it { should validate_presence_of(:question) }
-  it { should belong_to(:goal) } 
-  
+  it { should belong_to(:goal) }
 end

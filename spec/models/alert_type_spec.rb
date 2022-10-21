@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: alert_types
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  title      :string
 #  interval   :integer
 #  created_at :datetime         not null
