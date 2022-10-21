@@ -84,7 +84,6 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', require: false
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
@@ -99,3 +98,5 @@ gem "rubocop-performance", "~> 1.15"
 gem "rubocop-rails", "~> 2.16"
 
 gem "rubocop-rspec", "~> 2.13"
+
+gem "coverband", "~> 5.2"

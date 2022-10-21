@@ -24,6 +24,6 @@ RSpec.describe Goal, type: :model do
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:start_at) }
-  it { should belong_to(:alert_type) }
+  # it { should belong_to(:alert_type) }
   it { should have_many(:goal_alerts).dependent(:destroy) }
 end
