@@ -24,7 +24,7 @@ jobs:
         environment:
           POSTGRES_USER: testuser
           POSTGRES_DB: circle-test_test
-      - image: cimg/redis:4.0
+      - image: cimg/redis:4.8.0
 
     steps:
       - checkout
