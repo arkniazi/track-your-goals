@@ -7,9 +7,6 @@ jobs:
 
     docker:
       - image: cimg/ruby:3.1.2
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
