@@ -98,5 +98,3 @@ gem "rubocop-performance", "~> 1.15"
 gem "rubocop-rails", "~> 2.16"
 
 gem "rubocop-rspec", "~> 2.13"
-
-gem "coverband", "~> 5.2"
