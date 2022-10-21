@@ -98,3 +98,5 @@ gem "rubocop-performance", "~> 1.15"
 gem "rubocop-rails", "~> 2.16"
 
 gem "rubocop-rspec", "~> 2.13"
+
+gem "rspec", "~> 3.11"
