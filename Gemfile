@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
@@ -57,11 +57,10 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-
   gem 'dotenv-rails'
 
   gem 'shoulda-matchers', '~> 5.0'
-  
+
   gem 'factory_bot_rails'
 
   gem 'rspec-rails'
@@ -94,3 +93,8 @@ end
 gem 'tailwindcss-rails', '~> 2.0'
 
 gem 'devise'
+gem 'rubocop-performance', '~> 1.15'
+
+gem 'rubocop-rails', '~> 2.16'
+
+gem 'rubocop-rspec', '~> 2.13'

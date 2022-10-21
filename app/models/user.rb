@@ -28,11 +28,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, presence: true,
-         length: {minimum: 3, maximum: 35}
+         length: { minimum: 3, maximum: 35 }
 
-  #a constant can be declared using all caps
+  # a constant can be declared using all caps
   VALID_EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-  validates :email, presence: true, uniqueness: { case_sensitive: false }, 
-          length: {maximum: 125}, format: {with: VALID_EMAIL_REGEX}
-
+  validates :email, presence: true, uniqueness: { case_sensitive: false },
+          length: { maximum: 125 }, format: { with: VALID_EMAIL_REGEX }
 end

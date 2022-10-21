@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Alert < ApplicationRecord
-    validates :title, presence: true, uniqueness: { case_sensitive: false }
-    validates :interval, presence: true
-    has_many :goals
+  validates :title, presence: true, uniqueness: { case_sensitive: false }
+  validates :interval, presence: true
+  has_many :goals
 end

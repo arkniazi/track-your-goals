@@ -25,11 +25,11 @@ class AlertsController < ApplicationController
 
     respond_to do |format|
       if @alert.save
-        format.html { redirect_to alert_url(@alert), notice: 'Alert was successfully created.' }
-        format.json { render :show, status: :created, location: @alert }
+        format.html { redirect_to(alert_url(@alert), notice: 'Alert was successfully created.') }
+        format.json { render(:show, status: :created, location: @alert) }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @alert.errors, status: :unprocessable_entity }
+        format.html { render(:new, status: :unprocessable_entity) }
+        format.json { render(json: @alert.errors, status: :unprocessable_entity) }
       end
     end
   end
@@ -38,11 +38,11 @@ class AlertsController < ApplicationController
   def update
     respond_to do |format|
       if @alert.update(alert_params)
-        format.html { redirect_to alert_url(@alert), notice: 'Alert was successfully updated.' }
-        format.json { render :show, status: :ok, location: @alert }
+        format.html { redirect_to(alert_url(@alert), notice: 'Alert was successfully updated.') }
+        format.json { render(:show, status: :ok, location: @alert) }
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @alert.errors, status: :unprocessable_entity }
+        format.html { render(:edit, status: :unprocessable_entity) }
+        format.json { render(json: @alert.errors, status: :unprocessable_entity) }
       end
     end
   end
@@ -52,8 +52,8 @@ class AlertsController < ApplicationController
     @alert.destroy
 
     respond_to do |format|
-      format.html { redirect_to alerts_url, notice: 'Alert was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to(alerts_url, notice: 'Alert was successfully destroyed.') }
+      format.json { head(:no_content) }
     end
   end
 

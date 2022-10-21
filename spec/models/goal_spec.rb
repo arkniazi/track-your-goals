@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: goals
@@ -18,10 +20,10 @@
 require 'rails_helper'
 
 RSpec.describe Goal, type: :model do
-  let(:goal) {create(:goal, :with_alert_type)}
+  let(:goal) { create(:goal, :with_alert_type) }
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:start_at) }
-  it { should belong_to(:alert_type) } 
-  it { should have_many(:goal_alerts).dependent(:destroy) } 
+  it { should belong_to(:alert_type) }
+  it { should have_many(:goal_alerts).dependent(:destroy) }
 end

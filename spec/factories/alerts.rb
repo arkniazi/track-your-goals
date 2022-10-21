@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: alerts
@@ -10,7 +12,7 @@
 #
 FactoryBot.define do
   factory :alert do
-    title { "MyString" }
+    title { 'MyString' }
     interval { 1 }
   end
 end

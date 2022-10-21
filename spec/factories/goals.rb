@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: goals
@@ -16,7 +18,6 @@
 #  last_alert_generated_at :datetime
 #
 FactoryBot.define do
-
   factory :goal do
     name { 'Read Books' }
     desc { 'Improve reading habit' }
