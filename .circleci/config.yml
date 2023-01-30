@@ -7,9 +7,9 @@ jobs:
 
     docker:
       - image: cimg/ruby:3.1.2
-        auth:
-          username: arkniazi
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        # auth:
+        #   username: arkniazi
+        #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
@@ -18,9 +18,9 @@ jobs:
     # Service container image available at `host: localhost`
 
       - image: cimg/postgres:14.0
-        auth:
-          username: arkniazi
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        # auth:
+        #   username: arkniazi
+        #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: circle-test_test
