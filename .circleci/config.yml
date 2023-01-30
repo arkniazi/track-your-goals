@@ -13,7 +13,7 @@ jobs:
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
-          POSTGRES_USER: postgres
+          PGUSER: postgres
 
     # Service container image available at `host: localhost`
 
