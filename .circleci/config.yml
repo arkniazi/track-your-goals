@@ -22,7 +22,7 @@ jobs:
           username: arkniazi
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
-          POSTGRES_USER: testuser
+          POSTGRES_USER: root
           POSTGRES_DB: circle-test_test
 
     steps:
