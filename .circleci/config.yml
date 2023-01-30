@@ -17,7 +17,7 @@ jobs:
 
     # Service container image available at `host: localhost`
 
-      - image: cimg/postgres:15.1.0
+      - image: cimg/postgres:14.6
         auth:
           username: arkniazi
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
