@@ -11,19 +11,21 @@ jobs:
           username: arkniazi
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
-          RAILS_ENV: test
-          PGHOST: 127.0.0.1
+          PGHOST: localhost
           PGUSER: root
+          RAILS_ENV: test
+          RACK_ENV: test
 
     # Service container image available at `host: localhost`
 
-      - image: cimg/postgres:14.0
+      - image: cimg/postgres:14.6
         auth:
           username: arkniazi
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_PASSWORD
         environment:
-          POSTGRES_USER: testuser
-          POSTGRES_DB: circle-test_test
+          POSTGRES_USER: ubuntu
+          POSTGRES_DB: tyk
+          POSTGRES_PASSWORD: ""
 
     steps:
       - checkout
@@ -37,7 +39,7 @@ jobs:
       # Bundle install dependencies
       - run:
           name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+          command: bundle install
 
       - run: sudo apt install -y postgresql-client || true
 
@@ -51,12 +53,15 @@ jobs:
           name: Database Setup
           command: |
             bundle exec rake db:create
-            bundle exec rake db:structure:load
+            bundle exec rake db:schema:load
+          environment:
+            DATABASE_URL: "postgres://ubuntu@localhost:5432/trk"
 
       - run:
           name: Parallel RSpec
           command: bin/rails test
-
-      # Save artifacts
+          environment:
+            DATABASE_URL: "postgres://ubuntu@localhost:5432/trk"
+        
       - store_test_results:
           path: /tmp/test-results
